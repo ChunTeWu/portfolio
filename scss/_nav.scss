@@ -1,0 +1,381 @@
+nav{
+	position: fixed;
+	z-index: 9990;
+	transition: all 1s;
+	background-color: transparent;
+	height: 100vh;
+
+	
+	@media only screen and (max-width: $large) {
+		height: 75px;
+		width: 100vw;
+	}
+
+	.aboutMe{//about me section setting
+		position: relative;
+		float: left;
+		width: 0;
+		height: 100%;
+		background-color: white;
+		overflow: hidden;
+		transition: all 1s;
+		@media only screen and (max-width: $large) {
+			width: 100%;
+			height: 0;
+		}
+
+		.closeMenu{
+			position: absolute;
+			top: 5vh;
+			right: 21%;
+			z-index: 8000;
+
+			@media only screen and (max-width: $large) {
+				right: 12%;
+			}
+
+			@media only screen and (max-width: $medium) {
+				right: 8%;
+			}
+
+			@media only screen and (max-width: $small) {
+				right: 3%;
+			}
+		}
+
+		.aboutMeContent{
+			position: relative;
+			top: 4vh;
+			left: 0;
+			width: 60%;
+			margin: 0 auto;
+			background-color: $lightGray;
+			padding: 5vh 10%;
+
+			@media only screen and (max-width: 1550px) {
+				width: 80%;
+			}
+
+			@media only screen and (max-width: $large) {
+				padding: 5vh 7%;
+			}
+
+			@media only screen and (max-width: $medium) {
+				width: 90%;
+			}
+
+			@media only screen and (max-width: $small) {
+				width: 100%;
+			}
+
+
+
+			.left-line-wrapper{
+				width: 350px;
+				margin: 0 auto;
+				position: relative;
+
+				@media only screen and (max-width: $small) {
+					width: 90%;
+				}
+
+				img{
+					width: 100%;
+
+				}
+
+			}
+			.left-line-wrapper:before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -5%;
+				width: 2%;
+				height: 100%;
+				background-color: $darkGray;
+			}
+
+			h2{
+				margin-top: 1em;
+				text-align: center;
+			}
+			.quote{
+				margin: 0 auto;	
+				margin-top: 1em;
+				display: block;
+				text-align: center;
+				font-style: italic;
+				font-size: 1.2em;
+
+				b{	
+					font-size: 1.5em;
+					font-weight: 500;
+				}
+
+			}
+
+			p{
+				margin-top: 1em;
+			}
+
+			.socialIcons{
+				display: flex;
+				justify-content: space-around;
+				width: 150px;
+				margin: 0 auto;
+				margin-top: 25px;
+				a{
+					width: 30px;
+					height: 30px;
+				}
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		footer{
+			background-color: $inkBlue;
+			text-align: center;
+			height: 15vh;
+			p{
+				color: $white;
+				padding-top: 7vh;
+			}
+		}
+	}
+
+	.aboutMe::-webkit-scrollbar { 
+		display: none; 
+	}
+
+	.menuWrapper{
+		position: relative;
+		width: 100px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: white;
+
+		@media only screen and (max-width: $large) {
+			flex-direction: row;
+			width: 100%;
+		}
+	}
+
+	#logo{
+		width: 50px;
+		margin: 0 auto;
+		margin-top: 25px;
+		cursor: pointer;
+
+		@media only screen and (max-width: $large) {
+			margin: 10px;
+
+		}
+
+		svg{//nav logo
+			stroke: $black;
+		}
+	}
+	
+
+	.menuIcon{//hamburger menu
+		width: 50px;
+		height: 50px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		cursor: pointer;
+		position: relative;
+
+		@media only screen and (max-width: $large) {
+			margin: 10px;
+
+		}
+
+
+		span{
+			display: block;
+			width: 70%;
+			height: 3px;
+			margin: 0 auto;
+			margin-top: 50%;
+			background-color: $black;
+			border-radius: 15px;
+			transition: width 0.2s;
+		}
+
+		span:before, span:after{
+			content: "";
+			position: absolute;
+			left: 50%;
+			width: 70%;
+			height: 3px;
+			background-color: $black;
+			border-radius: 15px;
+			transform: translate(-50%, 0);
+
+		}
+
+		span:before{
+			top: 12px;
+		}
+
+		span:after{
+			top: 37px;
+		}
+
+
+
+	}
+
+	.menuIcon:hover span{//menu icon hover animation
+		width: 100%;
+	}
+
+	.menuList{//the list inside menu
+		position: absolute;
+		top: 0;
+		left: 100px;
+		width: 0;
+		height: 100vh;
+		overflow: hidden;
+		background-color: rgba(255, 255, 255, 0.9);
+		transition: all 1s;
+		text-align: center;
+
+		@media only screen and (max-width: $large) {
+			left: 0;
+			top: 75px;
+		}
+
+
+
+		.closeMenu{
+			top: 20px;
+			right: 30px;
+			display: none;
+
+			@media only screen and (max-width: $large) {
+				top: 95px;
+			}
+		}
+
+		ul{//the main list in menu
+			margin-top: 30vh;
+			transition: all 0.5s;
+
+			li{
+				margin-top: 5%;
+
+				a{
+					font-size: 1.5em;
+				}
+
+				ul>li:last-child{
+					margin-bottom: 0;
+				}
+			}
+
+			li:last-child{
+				margin-bottom: 5%;
+			}
+
+		}
+
+	}
+
+
+	#aboutMeLink{//link to about me
+		margin: 0 auto;
+		margin-bottom: 30px;
+		font-weight: 400;
+		position: relative;
+		@media only screen and (max-width: $large) {
+			display: none;
+
+		}
+	}
+
+	#aboutMeLink:after{
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 20px;
+		border-bottom: 2px solid $black;
+		transition: width 0.5s;
+
+	}
+
+	#aboutMeLink:hover:after{
+		width: 100%;
+	}
+
+}
+
+.showMenuList{//expend the menu list by adding class
+
+	.menuList{
+		width: calc(100vw - 100px);
+
+		@media only screen and (max-width: $large) {
+			width: 100%;
+		}
+
+		.closeMenu{
+			display: block;
+		}
+
+	}
+
+}
+
+.showAboutMe{//expend the menu list by adding class
+
+
+	.aboutMe{
+		width: calc( (100% - 100px) );
+		overflow-y: scroll; 
+
+		@media only screen and (max-width: $large) {
+			width: 100%;
+			height: calc(100vh - 75px);
+		}
+
+	}
+
+
+}
+
+
+.closeMenu{//cross icon for closing menu
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	cursor: pointer;
+
+}
+
+.closeMenu:before, .closeMenu:after{
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 40px;
+	height: 2px;
+	border-radius: 25px;
+	background-color: $black;
+
+}
+
+.closeMenu:before{
+	transform: rotate(45deg);
+}
+
+.closeMenu:after{
+	transform: rotate(-45deg);
+}
+

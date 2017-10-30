@@ -1,0 +1,32 @@
+// fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500);
+
+$fontMont: 'Montserrat', sans-serif;
+
+//colors
+$white: #eee;
+$black: #262626;
+$black95 :rgba(38, 38, 38, 0.95);
+$white90 :rgba(255, 255, 255, 0.9);
+$lighterGray: #e6e6e6;
+$lightGray: #D6D8DA;
+$darkGray: #8A8A8B;
+$inkBlue: #2D3340;
+
+$flappyColor: #29ABE2;
+$mosaicColor: #bea67c;
+$chadaoColor: #516d5e;
+$cityColor: #6eb6ba;
+$kirbyColor: #6ea3bf;
+$angkorColor: #ed7421;
+$pullColor: #00017f;
+$zlampColor: #606060;
+$photoColor: #df6248;
+
+//media query breakpoint
+$desktopLarge: 1281px;
+$desktopSmall: 1350px;
+$large: 1024px;
+$medium: 768px;
+$small: 480px;
+$mobile: 320px;

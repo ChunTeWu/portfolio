@@ -1,0 +1,774 @@
+// project icons section
+.icon-section{
+	background-color: transparent;
+	position: absolute;
+	left: 100px;
+	top: 100vh;
+	width: calc(100% - 100px);
+	height: 100vh;
+	z-index: 9001;
+	overflow: auto;
+	padding-bottom: 5vh;
+	@media only screen and (max-width: $large) {
+		width: 100%;
+		position: static;
+		height: auto;
+	}
+
+	// the link to project icon section
+	#link-project-home{
+		display: none;
+		position: fixed;
+		top: -40px;
+		right: 25%;
+		transform: translate(50%, 0);
+		cursor: pointer;
+		transition: all 0.3s;
+		font-weight: 600;
+		padding: 15px;
+	}
+
+	#link-project-home:after{
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -100px;
+		height: 100px;
+		transform: translate(-50%, 0);
+		border: 1px solid $black;
+	}
+
+	#link-project-home:hover{
+		top: 30px;
+	}
+
+}
+
+.project-icons{
+	background-color: $white90;
+	width: calc((100% - 100px)*0.5);
+	min-height: 100vh;
+	padding:  0 50px;
+	@media only screen and (max-width: $large) {
+		width: 100%;
+		min-height: 0;
+		padding: 0;
+	}
+
+	h2{
+		text-align: center;
+		font-size: 3em;
+		padding: 1em 0;
+
+		@media only screen and (max-width: $large) {
+			padding: 1em 0 0.5em 0;
+		}
+
+		@media only screen and (max-width: $small) {
+			font-size: 3em;
+		}
+
+
+	}
+}
+
+.project-icons:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.project-info{
+	position: fixed;
+	border-left: 15px solid $inkBlue;
+	top: 50%;
+	right: 25%;
+	transform: translate(50%, -50%);
+	width: 25%;
+	background-color: $white90;
+	padding: 30px;
+	display: none;
+
+	@media only screen and (max-width: $desktopSmall) {
+		width: 40%;
+	}
+
+	h3{
+		font-size: 2em;
+		margin-bottom: 0.2em;
+	}
+}
+
+.all-icons{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	@media only screen and (max-width: $large) {
+		width: 90%;
+
+	}
+
+	@media only screen and (max-width: $small) {
+		width: 100%;
+
+	}
+}
+
+// icon general settings
+.icon-wrapper{
+	position: relative;
+	margin: 2%;
+	width: 200px;
+	height: 200px;
+	margin: 15px;
+
+	@media only screen and (max-width: 1510px) {
+		width: 250px;
+		height: 250px;
+	}
+
+	@media only screen and (max-width: 950px) {
+		width: 300px;
+		height: 300px;
+	}
+
+	@media only screen and (max-width: 750px) {
+		width: 200px;
+		height: 200px;
+	}
+
+	@media only screen and (max-width: 550px) {
+		width: 300px;
+		height: 300px;
+	}
+
+	
+
+	.icon{
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		border-radius: 5px;
+		overflow: hidden;
+		cursor: pointer;
+
+	}
+
+	.hidden-project-info, .hidden-name{
+		display: none;
+	}
+
+}
+
+
+//cha dao icon settings
+.chadao{
+	background-color: $chadaoColor;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.tea-bowl{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/bowl.png');
+		background-size: 100% 100%;
+    }
+    .tea-bowl-shadow{
+		width: 100%;
+		height: 100%;
+		top: 30%;
+		left: 20%;
+		background-image: url('../images/icons/bowl-shadow.png');
+		background-size: 100% 100%;
+    }
+    .black{
+    	width: 50%;
+    	height: 100%;
+    	top: -100%;
+    	left: 0;
+    	background-color: black;
+    	transition: top 0.5s;
+    }
+
+    .white{
+    	width: 50%;
+    	height: 100%;
+    	top: 100%;
+    	left: 50%;
+    	background-color: white;
+    	transition: top 0.5s;
+    }
+    .cha{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/cha.png');
+		background-size: 100% 100%;
+		opacity: 0;
+		transition: all 0.5s;
+    }
+    .dao{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/dao.png');
+		background-size: 100% 100%;
+		opacity: 0;
+		transition: all 0.5s;
+    }
+}
+
+.chadao:hover .black{
+	top: 0;
+}
+.chadao:hover .white{
+	top: 0;
+}
+.chadao:hover .cha{
+	opacity: 1;
+}
+.chadao:hover .dao{
+	opacity: 1;
+}
+
+//the stroke color beside the info
+.chadao-info{
+	border-left: 15px solid $chadaoColor;
+}
+
+
+
+
+
+
+
+//flappy bird icon settings
+.flappy-bird{
+	background-color: #29ABE2;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.bird{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/fp.png');
+		background-size: 100% 100%;
+
+    }
+
+    .pipe-down, .pipe-up{
+    	opacity: 0;
+    	transition: opacity 0.5s;
+    }
+
+    .pipe-down{
+    	width: 100%;
+    	height: 100%;
+		bottom: -50%;
+		left: 0;
+		background-image: url('../images/icons/fp_pipe.png');
+		background-size: 100% 100%;
+    }
+
+    .pipe-up{
+    	width: 70%;
+    	height: 70%;
+		top: -25%;
+		left: 0;
+		transform: scaleY(-1) scaleX(-1);
+		background-image: url('../images/icons/fp_pipe.png');
+		background-size: 100% 100%;
+    }
+
+    .ground{
+    	width: 120%;
+    	height: 100%;
+		bottom: -5%;
+		left: -10%;
+		background-image: url('../images/icons/fp_ground.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+}
+//the stroke color beside the info
+.flappy-bird-info{
+	border-left: 15px solid $flappyColor;
+}
+
+// hover animation and pipes appear
+.flappy-bird:hover .pipe-down, .flappy-bird:hover .pipe-up{
+	opacity: 1;
+}
+
+.flappy-bird:hover .bird{
+	animation: flappy 0.7s infinite;
+}
+
+//flappy animation
+@keyframes flappy {
+	0%{
+		top: 0;
+		transform: rotate(0deg);
+	}
+
+	40%{
+		top: -15%;
+		transform: rotate(-10deg);
+	}
+
+}
+
+
+//city icon settings
+.city{
+	background-color: $cityColor;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.castle{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/castle.png');
+		background-size: 100% 100%;
+    }
+    .cloud{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/cloud.png');
+		background-size: 100% 100%;
+		transition: all 0.5s;
+    }
+}
+
+.city:hover .cloud{
+
+	animation: city 3s infinite;
+}
+
+//the stroke color beside the info
+.city-info{
+	border-left: 15px solid #ba4825;
+}
+
+//city animation
+@keyframes city {
+	0%{
+		opacity: 1;
+	}
+
+	75%{
+		opacity: 0;
+		left: 20%;
+		transform: scale(1.05);
+	}
+
+	76%{
+		left: 0;
+		transform: scale(1);
+	}
+
+	100%{
+		opacity: 1;
+	}
+
+}
+
+
+
+//kirby icon settings
+.kirby{
+	background-color: $kirbyColor;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.kirby-body{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/kirby.png');
+		background-size: 100% 100%;
+		transition: all 0.5s;
+		transform: translate(0, 0);
+    }
+    .kirby-shadow{
+		width: 100%;
+		height: 100%;
+		top: 30%;
+		left: 25%;
+		background-image: url('../images/icons/kirby-shadow.png');
+		background-size: 100% 100%;
+		transition: all 0.5s;
+		transform: translate(0, 0);
+    }
+}
+
+.kirby:hover .kirby-body{
+	animation: kirby 1s infinite;
+}
+
+.kirby:hover .kirby-shadow{
+	animation: kirby 1s 0.05s infinite;
+}
+
+//the stroke color beside the info
+.kirby-info{
+	border-left: 15px solid #f2a4a9;
+}
+
+// kirby animation
+@keyframes kirby {
+	0%{
+		transform: translate(0, 0);
+	}
+
+	45%{
+		transform: translate(0, -10%) scale(1.1);
+	}
+	
+	65%{
+		transform: translate(0, 5%);
+	}
+	
+	75%{
+		transform: translate(0, 0);
+	}
+
+	100%{
+		transform: translate(0, 0);
+	}
+
+}
+
+
+//mosaic icon settings
+.mosaic{
+	background-color: black;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.mosaic-icon{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/mosaic.png');
+		background-size: 100% 100%;
+		transition: transform 0.5s;
+
+
+    }
+}
+
+.mosaic:hover .mosaic-icon{
+	transform: scale(1.1);
+	animation: mosaic 3s infinite;
+}
+
+//the stroke color beside the info
+.mosaic-info{
+	border-left: 15px solid $mosaicColor;
+}
+
+//mosaic animation
+@keyframes mosaic {
+	0%{
+		transform: rotate(0deg);
+	}
+
+	25%{
+		transform: rotate(90deg);
+	}
+
+	100%{
+		transform: rotate(90deg);
+	}
+
+}
+
+
+//angkor icon settings
+.angkor{
+	background-color: white;
+	position: relative;
+	border: 5px solid $angkorColor;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.angkor-icon{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/angkor.png');
+		background-size: 100% 100%;
+    }
+
+    .sun{
+    	width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 0;
+		opacity: 0;
+		background-image: url('../images/icons/sun.png');
+		background-size: 100% 100%;
+		transition: all 0.75s ease-in-out;
+
+    }
+}
+
+.angkor:hover .sun{
+	top: 0;
+	opacity: 1;
+}
+
+//the stroke color beside the info
+.angkor-info{
+	border-left: 15px solid $angkorColor;
+}
+
+
+//pull icon settings
+.pull{
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.pull-background{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: linear-gradient(black, $pullColor);
+		transition: opacity 0.5s ease-in-out;
+    }
+
+    .pull-game-background{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/game.jpg');
+		background-size: 100% 100%;
+    }
+
+    .pull-text{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/pull.png');
+		background-size: 100% 100%;
+    }
+}
+
+.pull:hover .pull-background{
+	opacity: 0;
+}
+
+//the stroke color beside the info
+.pull-info{
+	border-left: 15px solid $pullColor;
+}
+
+
+//zlamp icon settings
+.zlamp{
+	background-color: $zlampColor;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.zlamp-lamp{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/lamp.png');
+		background-size: 100% 100%;
+    }
+
+    .zlamp-light{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		background-image: url('../images/icons/light.png');
+		background-size: 100% 100%;
+		transition: all 0.5s;
+    }
+
+
+}
+
+.zlamp:hover .zlamp-light{
+	opacity: 1;
+	animation: zlamp 3s;
+}
+
+//the stroke color beside the info
+.zlamp-info{
+	border-left: 15px solid $zlampColor;
+}
+
+//zlamp animation
+@keyframes zlamp {
+	0%{
+		opacity: 1;
+	}
+
+	2%{
+		opacity: 0;
+	}
+
+	10%{
+		opacity: 1;
+	}
+	12%{
+		opacity: 0;
+	}
+
+	14%{
+		opacity: 1;
+	}
+
+
+}
+
+//portfolio icon settings
+.portfolio-icon{
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	svg{
+		top: 0;
+		left: 0;
+		width: 100%;
+		stroke: $black;;	
+	}
+
+}
+
+//the stroke color beside the info
+.portfolio-info{
+	border-left: 15px solid $black;
+}
+
+
+
+
+//camera icon settings
+.photo{
+	background-color: #fb6e51;
+	position: relative;
+
+	*{
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	.camera-shadow{
+		width: 100%;
+		height: 100%;
+		top: 30%;
+		left: 30%;
+		background-image: url('../images/icons/camera-shadow.png');
+		background-size: 100% 100%;
+    }
+
+    .camera{
+    	width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('../images/icons/camera.png');
+		background-size: 100% 100%;
+    }
+    .camera-flash{
+    	width: 100%;
+    	height: 100%;
+    	top: 0;
+    	left: 0;
+    	background-color: white;
+    	opacity: 0;
+    }
+
+
+}
+
+.photo:hover .camera-flash{
+	animation: photo 3s;
+}
+
+//the stroke color beside the info
+.photo-info{
+	border-left: 15px solid $photoColor;
+}
+
+//photo animation
+@keyframes photo {
+	0%{
+		opacity: 0;
+	}
+
+	10%{
+		opacity: 1
+	}
+
+	100%{
+		opacity: 0;
+	}
+
+
+}
+
+
+
+

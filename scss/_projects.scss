@@ -1,0 +1,192 @@
+.project-detail{
+	position: absolute;
+	right: 0;
+	top: 100vh;
+	width: calc(100% - 100px);
+	height: 100vh;
+	overflow: auto;
+	z-index: 9100;
+	background-color: white;
+	display: flex;
+
+	@media only screen and (max-width: $large) {
+		position: fixed;
+		top: 75px;
+		right: 100vw;
+		opacity: 0;
+		width: 100%;
+		height: calc(100vh - 75px);
+		display: block;
+	}
+
+	.closeMenu{
+		top: 25px;
+		right: 25px;
+		position: fixed;
+		display: none;
+
+		@media only screen and (max-width: $large) {
+			position: absolute;
+		}
+
+		@media only screen and (max-width: $small) {
+			right: 10px;
+			top: 15px;
+		}
+	}
+	
+}
+
+.project-images{
+	width: calc(50% - 50px);
+	height: 100vh;
+	background-color: $lighterGray;
+	float: left;
+	overflow: auto;
+	order: 1;
+	@media only screen and (max-width: $large) {
+		float: left;
+		width: 100%;
+		height: auto;
+	}
+
+	img{
+		width: 100%;
+		display: block;
+		float: left;
+	}
+
+	.img-50{
+		width: 50%;
+		display: block;
+		float: left;
+
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	iframe{
+		width: 100%;
+		min-height: 500px;
+		display: block;
+
+		@media only screen and (max-width: $small) {
+			min-height: 350px;
+		}
+	}
+
+}
+
+
+// setting for the photo gallery section
+.project-photo .project-images{
+	width: 100%;
+	padding: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	img{
+		max-width: 300px;
+		margin: 10px;
+
+		@media only screen and (max-width: 800px) {
+			max-width: 250px;
+		}
+
+		@media only screen and (max-width: 666px) {
+			max-width: 200px;
+		}		
+
+		@media only screen and (max-width: 560px) {
+			max-width: 100%;
+		}	
+
+	}
+
+	@media only screen and (max-width: 666px) {
+		justify-content: space-between;
+	}	
+
+	@media only screen and (max-width: $small) {
+		padding: 50px 0;
+	}		
+
+}
+
+.project-description{
+	width: calc(50% + 50px);
+	height: 100vh;
+	background-color: $lighterGray;
+	float: left;
+	padding: 3.5em 7vw 3.5em 7vw;
+	overflow: auto;
+	order: 2;
+
+	@media only screen and (max-width: $large) {
+		float: right;
+		width: 100%;
+		height: auto;
+	}
+
+	h2{
+		font-size: 2.5em;
+		font-weight: 400;
+
+		@media only screen and (max-width: $mobile) {
+			font-size: 2.2em;
+		}
+
+	}
+
+	h3{
+		margin-top: 0.5em;
+		font-size: 1.2em;
+		font-weight: 400;
+
+	}
+
+	img{
+		width: 35px;
+		display: inline-block;
+		margin-top: 15px;
+		margin-right: 1em;
+		text-transform: none;
+		color: $darkGray;
+
+		@media only screen and (max-width: 400px) {
+			width: 25px;
+		}
+	}
+
+
+	a{
+		border: 1px solid black;
+		display: block;
+		padding: 15px;
+		width: 175px;
+		text-align: center;
+		margin-top: 1em;
+		transition: all 0.4s;
+
+	}
+
+	a:hover{
+		background-color: $black;
+		color: white;
+	}
+
+	h4{
+		margin-top: 3em;
+		font-size: 1em;
+		font-weight: 500;
+	}
+
+	p{
+		font-size: 0.9em;
+		margin-top: 1em;
+	}
+	
+
+}
+

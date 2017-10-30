@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+// SASS imports go here...
+@import "_reset";
+@import "_variables";
+@import "_pace";
+@import "_simpleLightbox";
+@import "_openAnimation";
+@import "_main";
+@import "_nav";
+@import "_icons";
+@import "_projects";
+@import "_footer";
+
+// general settings
+body{
+	font-family: $fontMont;
+	letter-spacing: 0.1em;
+
+}
+
+h1, h2, h3, h4, h5{
+	text-transform: uppercase;
+	color: $black;
+}
+
+h1{
+	font-size: 4em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $black;
+}
+
+p{
+	line-height: 1.6em;
+	color: $black;
+}
+
+span{
+	text-transform: uppercase;
+	color: $black;
+}
+

@@ -1,0 +1,45 @@
+.animation-wrap{//entire animation wrapper
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9998;
+	background-color: $white;
+
+}
+
+.animation-wrap .animation-cover{//the fading cover to avoid the icon blink
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	background-color: $white;
+}
+
+.slidAnimation{//slind animation
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 0;
+	height: 100vh;
+	z-index: 9999;
+	background-color: $black;;
+	display: none;
+	@media only screen and (max-width: $large) {
+		height: 0;
+		width: 100%;
+	}
+}
+
+.animation-wrap svg{//main logo SVG
+	stroke: $black;
+	margin-left: 50%;
+	margin-top: 50vh;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 250px;
+	height: 250px;
+}
