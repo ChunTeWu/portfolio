@@ -119,35 +119,30 @@
 
 		logoWFill3.complete = function(){
 			if (window.matchMedia('(min-width: 1025px)').matches) {
-				if (pageLoded) {
-					$('.slidAnimation').fadeIn(0);
+				$('.slidAnimation').fadeIn(0);
+				$('.slidAnimation').animate({
+					width: '100%'
+				}, 500, function(){
+					$('.animation-wrap').fadeOut(0);
 					$('.slidAnimation').animate({
-						width: '100%'
+						width: '100px'
 					}, 500, function(){
-						$('.animation-wrap').fadeOut(0);
-						$('.slidAnimation').animate({
-							width: '100px'
-						}, 500, function(){
-							$('.slidAnimation').fadeOut(1500);
-						});
+						$('.slidAnimation').fadeOut(1500);
 					});
-				}
+				});
 		    } 
 		    else  {
-		    	if (pageLoded) {
-					$('.slidAnimation').fadeIn(0);
+				$('.slidAnimation').fadeIn(0);
+				$('.slidAnimation').animate({
+					height: '100vh'
+				}, 500, function(){
+					$('.animation-wrap').fadeOut(0);
 					$('.slidAnimation').animate({
-						height: '100vh'
+						height: '75px'
 					}, 500, function(){
-						$('.animation-wrap').fadeOut(0);
-						$('.slidAnimation').animate({
-							height: '75px'
-						}, 500, function(){
-							$('.slidAnimation').fadeOut(1500);
-						});
+						$('.slidAnimation').fadeOut(1500);
 					});
-				}
-
+				});
 		    }
 
 		};
