@@ -42,7 +42,8 @@
 			<!-- city icon -->
 			<div class="icon-wrapper">
 				<div class="icon city">
-					<div class="castle" data-parallaxify-range-x="5" data-parallaxify-range-y="1"></div>
+					<!-- <div class="castle" data-parallaxify-range-x="5" data-parallaxify-range-y="1"></div> -->
+					<div class="castle"></div>
 					<div class="cloud" data-parallaxify-range-x="20" data-parallaxify-range-y="15"></div>
 				</div>
 				<div class="hidden-project-info city-info">
@@ -72,7 +73,7 @@
 			<!-- mosaic icon -->
 			<div class="icon-wrapper">
 				<div class="icon mosaic">
-					<div class="mosaic-icon" data-parallaxify-range-x="5"></div>	
+					<div class="mosaic-icon"></div>	
 				</div>
 				<div class="hidden-project-info mosaic-info">
 					<h1>Mosaic</h1>
@@ -86,7 +87,7 @@
 			<div class="icon-wrapper">
 				<div class="icon angkor">
 					<div class="sun"></div>
-					<div class="angkor-icon" data-parallaxify-range-x="3"></div>	
+					<div class="angkor-icon"></div>	
 				</div>
 				<div class="hidden-project-info angkor-info">
 					<h1>Angkor Harvest</h1>
@@ -101,7 +102,7 @@
 				<div class="icon pull">
 					<div class="pull-game-background"></div>
 					<div class="pull-background"></div>
-					<div class="pull-text" data-parallaxify-range-x="3" data-parallaxify-range-y="3"></div>
+					<div class="pull-text"></div>
 				</div>
 				<div class="hidden-project-info pull-info">
 					<h1>Pull</h1>
@@ -114,8 +115,8 @@
 			<!-- zlamp icon -->
 			<div class="icon-wrapper">
 				<div class="icon zlamp">
-					<div class="zlamp-lamp"  data-parallaxify-range-x="2"></div>
-					<div class="zlamp-light" data-parallaxify-range-x="2"></div>
+					<div class="zlamp-lamp"></div>
+					<div class="zlamp-light"></div>
 				</div>
 				<div class="hidden-project-info zlamp-info">
 					<h1>Z-light</h1>

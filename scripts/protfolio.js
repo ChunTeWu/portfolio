@@ -30,7 +30,7 @@
 
 
 	function openAnimation(){//open animation function
-
+		
 		let logoStroke = anime({
 			targets: '.animation-wrap #box-fill-in',
 			strokeDashoffset: function(el) {
@@ -170,15 +170,18 @@
 	}
 
 	function backgroundLogoAnimation(){
-		$( window ).on( "mousemove", function( event ) {
-			var mouseX = event.pageX;
-			var windowCenter = $window.width() / 2;
-			var animateX = (mouseX - windowCenter) * 0.01 + 'px';
-			$('.mainheader .mainLogo svg').animate({
-				left: animateX,
-			}, 5);
-			
-		});
+		
+			$( window ).on( "mousemove", function( event ) {
+				var mouseX = event.pageX;
+				var windowCenter = $window.width() / 2;
+				var animateX = (mouseX - windowCenter) * 0.01 + 'px';
+				if (onIntro) {
+					$('.mainheader .mainLogo svg').animate({
+						left: animateX,
+					}, 5);
+				}
+			});
+		
 	}
 
 	function navControl(){
@@ -302,11 +305,18 @@
 
 
 		$linkBackHome.on('click', function(e){
+				var mouseX = event.pageX;
+				var windowCenter = $window.width() / 2;
+				var animateX = (mouseX - windowCenter) * 0.01 + 'px';
 			if (!onIntro && window.matchMedia('(min-width: 1025px)').matches) {
 				onIntro = 1;
 				$intro.animate({//move intro back
 					top: '0',
 				}, 700);
+
+				$('.mainheader .mainLogo svg').animate({
+					left: animateX,
+				}, 250);
 
 				setTimeout(function(){
 					$('.page-wrapper').removeClass('move-link-to-project');
