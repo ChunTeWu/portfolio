@@ -15,8 +15,8 @@
 
 	<!-- build:css styles/styles.min.css -->
 	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="shortcut icon" href="favicon.ico"/>
 	<!-- endbuild -->
+	<link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
 
